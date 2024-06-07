@@ -1,0 +1,151 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    height: 100vh;
+}
+.box{
+    width: 200px;
+    height: 200px;
+    background-color: pink;
+    position: relative;
+    top: 0;
+    left: 0;
+    /* animation: box 10s linear infinite; */
+}
+
+@keyframes box {
+    0%{
+        background-color: pink;
+        top: 0;
+        left: 0;
+    }
+    25%{
+        background-color: rgb(23, 103, 224);
+        top: 0;
+        left: 87%;
+        transform: rotate(0deg);
+    }
+    26%{
+        transform: rotate(90deg);
+    }
+    50%{
+        background-color: rgb(106, 0, 255);
+        top: 75%;
+        left: 87%;
+        right: 0;
+        transform: rotate(90deg)
+    }
+    51%{
+        transform: rotate(180deg);
+    }
+    75%{
+        background-color: rgb(190, 20, 154);
+        top: 75%;
+        left: 0;
+        right: 87%;
+        transform: rotate(180deg);
+    }
+    76%{
+        transform: rotate(270deg);
+    }
+    99%{
+        background-color: rgb(161, 5, 31);
+        top: 0;
+        left: 0;
+        transform: rotate(270deg);
+    }
+    100%{
+        background-color: rgb(161, 5, 31);
+        top: 0;
+        left: 0;
+        transform: rotate(360deg);
+    }
+}
+
+.progress-bar h1{
+    font-size: 30px;
+    text-align: center;
+}
+.bar{
+    width: 600px;
+    margin: 20px auto;
+    border: 5px solid orange;
+    overflow: hidden;
+}
+.inside{
+    width: 60px;
+    height: 50px;
+    background-color: orange;
+    position: relative;
+}
+
+.inside-bar1{
+    animation: bar1 2s linear infinite;
+}
+@keyframes bar1{
+    0%{
+        left: 0;
+    }
+    100%{
+        left: 100%;
+    }
+}
+
+.inside-bar2{
+    animation: bar2 2s steps(10, end) infinite;
+}
+@keyframes bar2 {
+    from{
+        left: 0;
+    }
+    to{
+        left: 100%;
+    }
+}
+
+.inside-bar3{
+    animation: bar3 2s linear infinite alternate-reverse;
+}
+@keyframes bar3 {
+    from{
+        left: 0;
+    }
+    to{
+        left: 90%;
+    }
+}
+
+.inside-bar4{
+    animation: bar4 3s linear infinite alternate-reverse;
+}
+@keyframes bar4 {
+    0%{
+        left: 0;
+    }
+    50%{
+        left: 50%;
+        width: 150px;
+    }
+    100%{
+        left: 90%;
+        width: 60px;
+    }
+}
+
+.inside-bar5{
+    animation: bar5 5s linear infinite;
+}
+@keyframes bar5 {
+    0%{
+        width: 0px;
+    }
+    25%{
+        width: 100%;
+    }
+    100%{
+        width: 100%;
+    }
+}
